@@ -9,8 +9,33 @@ The gTTS library is a Python interface to Google Translate's text-to-speech API.
 2. Save the speech as an audio file <br>
 3. Play the generated speech directly
 
-<h2>Installation</h2>
-<strong>1. Clone the repository </strong> git clone https://github.com/NitinRwt/text-to-speech.git <br>
-cd text-to-speech-translation
-<strong>2. Install the required libraries</strong> pip install gtts playsound
+## Installation
+1. Clone the repository
+   ```bash
+   git clone https://github.com/NitinRwt/text-to-speech.git
+
+2. Install the required libraries
+   ```bash
+   pip install gtts playsound
+   
+## Usage
+1. Basic Usage: Convert text to speech and save it as an MP3 file.
+   ```bash
+   from gtts import gTTS
+   text = "Hello, how are you?"
+   tts = gTTS(text=text, lang='en')
+   tts.save("hello.mp3")
+2. Playing the Audio: Use the playsound library to play the saved MP3 file.
+   ```bash
+   from playsound import playsound
+   playsound("hello.mp3")
+3. Multilingual Support: Convert text to speech in different languages.
+   ```bash
+   from gtts import gTTS
+   text = "Bonjour, comment ça va?"
+   tts = gTTS(text=text, lang='fr')
+   tts.save("bonjour.mp3")
+   playsound("bonjour.mp3")
+
+
 
